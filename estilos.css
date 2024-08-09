@@ -1,0 +1,196 @@
+body {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+  nav {
+    margin-top: 20px;
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .logo:hover {
+    transform: scale(1.2);
+    transition: 1.6s;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    cursor: pointer;
+    border-radius: 12.8px;
+  }
+
+  ul li {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  ul li:hover {
+    transform: scale(1.3);
+    transition: 1.6s;
+  }
+
+  a {
+    color: black;
+  }
+  
+  img {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+
+  .contenedor {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 40px; 
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    margin: 0 0 15px 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.informacion h2 {
+    margin-top: 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tecnologias {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+    margin-top: 20px;
+}
+
+.tecnologias img {
+    width: 50px; 
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+
+
+.tecnologias img:hover {
+    transform: scale(1.2); 
+    border-radius: 12px;
+}
+
+.proyectos img {
+  width: 60px;
+  height: 60px;
+}
+
+
+
+.footer {
+    background-color: black;
+    color: white;
+    bottom: 0;
+    padding: 40px;
+    font-size: 14px;
+    position: fixed;
+    text-align: center;
+    z-index: 999;
+    left: 0;
+    right: 0;
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 10px 15px;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .tecnologias {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .tecnologias img {
+    width: 40px;
+  }
+
+  .proyectos img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer {
+    padding: 20px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .contenedor {
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .tecnologias img {
+    width: 35px;
+  }
+
+  .proyectos img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer {
+    padding: 15px;
+    font-size: 10px;
+  }
+}
