@@ -1,5 +1,5 @@
 body {
-  font-family: "Oswald", sans-serif;
+  font-family: "Edu AU VIC WA NT Hand", cursive;
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
@@ -60,14 +60,49 @@ body {
     margin-right: 5px;
   }
 
+  .contenedor * {
+    /* estilos para todos los elementos dentro del contenedor */
+  }
+
   .contenedor {
     display: flex;
-    justify-content: center; 
-    align-items: flex-start; 
-    gap: 40px; 
-    padding: 20px;
-}
-
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    border: 5px solid;
+    border-image-source: linear-gradient(to right, rgb(255, 0, 0), rgb(0, 255, 0), rgb(0, 0, 255));
+    border-image-slice: 1;
+    animation: rotate 5s linear infinite;
+  }
+  
+  .contenedor:hover {
+    border-image-source: linear-gradient(to right, rgb(255, 255, 0), rgb(0, 0, 255), rgb(255, 0, 0));
+    cursor: pointer;
+  }
+  
+  .contenedor span {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  @keyframes rotate {
+    0% {
+      border-image-source: linear-gradient(to right, rgb(255, 0, 0), rgb(0, 255, 0), rgb(0, 0, 255));
+    }
+    25% {
+      border-image-source: linear-gradient(to right, rgb(0, 255, 0), rgb(0, 0, 255), rgb(255, 0, 0));
+    }
+    50% {
+      border-image-source: linear-gradient(to right, rgb(0, 0, 255), rgb(255, 0, 0), rgb(0, 255, 0));
+    }
+    75% {
+      border-image-source: linear-gradient(to right, rgb(255, 0, 0), rgb(0, 255, 0), rgb(0, 0, 255));
+    }
+    100% {
+      border-image-source: linear-gradient(to right, rgb(0, 255, 0), rgb(0, 0, 255), rgb(255, 0, 0));
+    }
+  }
 h1, h2, h3 {
     margin: 0;
     display: flex;
@@ -325,19 +360,3 @@ p {
   }
 }
 
-.github-link span {
-  animation: textAnimation 3s linear infinite;
-  background: linear-gradient(45deg, red, green, blue, red);
-  background-size: 400%;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-@keyframes textAnimation {
-  0% {
-      background-position: 0%;
-  }
-  100% {
-      background-position: 400%;
-  }
-}
